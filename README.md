@@ -42,7 +42,7 @@ The name of the built kpz file
     plugin-module: 'Path/To/Plugin/Module.pm"
 ```
 
-Take a look at https://github.com/bywatersolutions/koha-plugin-kitchen-sink/blob/master/.github/workflows/main.yml for a real world usage.
+Take a look at https://github.com/bywatersolutions/koha-plugin-kitchen-sink/blob/main/.github/workflows/main.yml for a real world usage.
 
 ## Changelog
 
@@ -50,6 +50,7 @@ Take a look at https://github.com/bywatersolutions/koha-plugin-kitchen-sink/blob
 - **BREAKING**: Requires GitHub Actions runner with `$GITHUB_OUTPUT` support
 - Fixed deprecated `::set-output` syntax, now uses modern `$GITHUB_OUTPUT`
 - Updated README example to use version tag instead of `@master`
+- Migrated default branch from master to main
 - Eliminates GitHub Actions deprecation warnings
 
 ### v2.0.0
