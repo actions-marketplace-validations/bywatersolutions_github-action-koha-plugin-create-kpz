@@ -71,4 +71,4 @@ zip -r ../${RELEASE_FILENAME} ./Koha
 cd ..
 rm -rf dist
 
-echo ::set-output name=filename::${RELEASE_FILENAME}
+echo "filename=${RELEASE_FILENAME}" >> $GITHUB_OUTPUT

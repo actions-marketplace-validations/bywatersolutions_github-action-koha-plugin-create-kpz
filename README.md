@@ -34,7 +34,7 @@ The name of the built kpz file
 ```yaml
 - name: Build Koha Plugin kpz artifact
   id: kpz
-  uses: "bywatersolutions/github-action-koha-plugin-create-kpz@master"
+  uses: "bywatersolutions/github-action-koha-plugin-create-kpz@v3"
   with:
     release-version: ${{ steps.semvers.outputs.v_patch }}
     release-name: ${{ steps.myvars.outputs.GITHUB_REPO }}
@@ -43,3 +43,18 @@ The name of the built kpz file
 ```
 
 Take a look at https://github.com/bywatersolutions/koha-plugin-kitchen-sink/blob/master/.github/workflows/main.yml for a real world usage.
+
+## Changelog
+
+### v3.0.0
+- **BREAKING**: Requires GitHub Actions runner with `$GITHUB_OUTPUT` support
+- Fixed deprecated `::set-output` syntax, now uses modern `$GITHUB_OUTPUT`
+- Updated README example to use version tag instead of `@master`
+- Eliminates GitHub Actions deprecation warnings
+
+### v2.0.0
+- Added Vue asset building support
+- Improved plugin module detection
+
+### v1.0.0
+- Initial release with basic kpz building functionality
