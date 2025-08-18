@@ -15,7 +15,17 @@ echo "RELEASE FILENAME: $RELEASE_FILENAME"
 TODAY_ISO=$(date '+%Y-%m-%d')
 echo "TODAY ISO: $TODAY_ISO"
 
+echo "PWD:";
+pwd;
+echo "FILES:";
+find . -type f;
+
 cd /github/workspace
+
+echo "PWD:";
+pwd;
+echo "FILES:";
+find . -type f;
 
 # Check if this is a Vue.js plugin
 if [ -f "package.json" ]; then
@@ -33,6 +43,11 @@ fi
 mkdir dist
 cp -r Koha dist/.
 cd dist
+
+echo "PWD:";
+pwd;
+echo "FILES:";
+find . -type f;
 
 [ -z "$PLUGIN_MODULE" ] && PLUGIN_MODULE=$(find . -regex '\./Koha/Plugin/.*[A-Za-z]*\.pm$' | head -1 | sed '1q;d')
 echo "PLUGIN MODULE: $PLUGIN_MODULE"
